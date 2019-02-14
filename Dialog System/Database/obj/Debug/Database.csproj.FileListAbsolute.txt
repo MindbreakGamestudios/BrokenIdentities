@@ -1,0 +1,16 @@
+D:\Projects\Unity\Database\bin\Debug\Database.dll
+D:\Projects\Unity\Database\bin\Debug\Database.pdb
+D:\Projects\Unity\Database\bin\Debug\LiteDB.dll
+D:\Projects\Unity\Database\obj\Debug\Database.csproj.CoreCompileInputs.cache
+D:\Projects\Unity\Database\obj\Debug\Database.csproj.CopyComplete
+D:\Projects\Unity\Database\obj\Debug\Database.dll
+D:\Projects\Unity\Database\obj\Debug\Database.pdb
+D:\Projects\Unity\Database\obj\Debug\Database.csprojAssemblyReference.cache
+D:\Projects\Unity\Dialog System\Database\bin\Debug\Database.dll
+D:\Projects\Unity\Dialog System\Database\bin\Debug\Database.pdb
+D:\Projects\Unity\Dialog System\Database\bin\Debug\LiteDB.dll
+D:\Projects\Unity\Dialog System\Database\obj\Debug\Database.csprojAssemblyReference.cache
+D:\Projects\Unity\Dialog System\Database\obj\Debug\Database.csproj.CoreCompileInputs.cache
+D:\Projects\Unity\Dialog System\Database\obj\Debug\Database.csproj.CopyComplete
+D:\Projects\Unity\Dialog System\Database\obj\Debug\Database.dll
+D:\Projects\Unity\Dialog System\Database\obj\Debug\Database.pdb
