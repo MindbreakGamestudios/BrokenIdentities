@@ -5,7 +5,6 @@ using UnityEditor;
 using Assets.Scripts.Dialogsystem;
 using System;
 using System.Linq;
-using Assets.Scripts.Dialogsystem.Database;
 
 public class DialogEditorWindow : EditorWindow
 {
@@ -258,9 +257,7 @@ public class DialogEditorWindow : EditorWindow
             OnClickOutPoint, OnClickRemoveDialogNode,
             OnSelectedNodeChanged));
 
-        DialogDatabaseConnection databaseConnection = new DialogDatabaseConnection();
-        databaseConnection.GetDialogDataAdapter();
-
+        var context = Assets.Scripts.Database.Dialogsystem.DialogDatabaseContextFactory.GetContextCreator();
     }
 
     private void OnClickInPoint(DialogConnectionPoint point)
