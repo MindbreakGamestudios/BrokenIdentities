@@ -76,8 +76,8 @@
     <Compile Include="Assets\Scripts\Map\MapItemInteractionSystem.cs" />
     <Compile Include="Assets\Scripts\Map\MapItemsSystem.cs" />
     <Compile Include="Assets\Scripts\Map\ShowHideMap.cs" />
-    <Compile Include="Assets\Scripts\Player\Player.cs" />
-    <Compile Include="Assets\Scripts\Player\PlayerInput.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerData.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerInputSystem.cs" />
     <Reference Include="Unity.Entities.Properties">
       <HintPath>I:/Unity/BrokenIdentities/Dialog System/Library/ScriptAssemblies/Unity.Entities.Properties.dll</HintPath>
     </Reference>
@@ -143,6 +143,33 @@
     </Reference>
     <Reference Include="Unity.Entities.StaticTypeRegistry">
       <HintPath>I:/Unity/BrokenIdentities/Dialog System/Library/ScriptAssemblies/Unity.Entities.StaticTypeRegistry.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.Animation.Runtime">
+      <HintPath>I:/Unity/BrokenIdentities/Dialog System/Library/ScriptAssemblies/Unity.2D.Animation.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="PsdPlugin">
+      <HintPath>I:/Unity/BrokenIdentities/Dialog System/Library/ScriptAssemblies/PsdPlugin.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.Psdimporter.Editor">
+      <HintPath>I:/Unity/BrokenIdentities/Dialog System/Library/ScriptAssemblies/Unity.2D.Psdimporter.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.InternalAPIEngineBridge.001">
+      <HintPath>I:/Unity/BrokenIdentities/Dialog System/Library/ScriptAssemblies/Unity.InternalAPIEngineBridge.001.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.Common.Runtime">
+      <HintPath>I:/Unity/BrokenIdentities/Dialog System/Library/ScriptAssemblies/Unity.2D.Common.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.Animation.Editor">
+      <HintPath>I:/Unity/BrokenIdentities/Dialog System/Library/ScriptAssemblies/Unity.2D.Animation.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.Triangle.Runtime">
+      <HintPath>I:/Unity/BrokenIdentities/Dialog System/Library/ScriptAssemblies/Unity.2D.Triangle.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.Common.Editor">
+      <HintPath>I:/Unity/BrokenIdentities/Dialog System/Library/ScriptAssemblies/Unity.2D.Common.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.InternalAPIEditorBridge.001">
+      <HintPath>I:/Unity/BrokenIdentities/Dialog System/Library/ScriptAssemblies/Unity.InternalAPIEditorBridge.001.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>I:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
