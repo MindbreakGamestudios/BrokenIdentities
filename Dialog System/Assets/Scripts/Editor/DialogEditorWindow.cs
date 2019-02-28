@@ -5,6 +5,8 @@ using UnityEditor;
 using Assets.Scripts.Dialogsystem;
 using System;
 using System.Linq;
+using Assets.Scripts.Dialogsystem.Models;
+using Assets.Scripts;
 
 public class DialogEditorWindow : EditorWindow
 {
@@ -90,6 +92,12 @@ public class DialogEditorWindow : EditorWindow
         GUI.Box(propertyAreaBounds, GUIContent.none);
         GUILayout.BeginArea(propertyAreaBounds, style);
         GUILayout.Label("Dialog Properties:");
+
+        if (GUILayout.Button("Speichern"))
+        {
+            SaveOpenDialogChanges();
+        }
+
         if(selectedNode != null)
         {
             GUILayout.BeginVertical();
@@ -256,8 +264,6 @@ public class DialogEditorWindow : EditorWindow
             outPointStyle, OnClickInPoint,
             OnClickOutPoint, OnClickRemoveDialogNode,
             OnSelectedNodeChanged));
-
-        var context = Assets.Scripts.Database.Dialogsystem.DialogDatabaseContextFactory.GetContextCreator();
     }
 
     private void OnClickInPoint(DialogConnectionPoint point)
@@ -314,5 +320,100 @@ public class DialogEditorWindow : EditorWindow
         selectedInPoint = null;
         selectedOutPoint = null;
     }
+
+    #region "Saving"
+
+    private Dialog selectedDialog;
+    private void OnSelectionChange()
+    {
+        selectedDialog =  (Assets.Scripts.Dialogsystem.Models.Dialog)Selection.activeObject;
+    }
+
+    private void SaveOpenDialogChanges()
+    {
+        if(selectedDialog != null)
+        {
+            var entries = GetDialogEntries();
+            var x = entries;
+        }
+    }
+
+    private List<Assets.Scripts.Database.Dialogsystem.Models.DialogEntry> GetDialogEntries()
+    {
+        var rootNodes = (from entry in nodes
+                           where connections.Where((s) => s.inPoint.node == entry).Count() == 0
+                           select entry).ToList();
+        if (rootNodes.Count == 0) return null;
+
+        List<Assets.Scripts.Database.Dialogsystem.Models.DialogEntry> entries =
+            new List<Assets.Scripts.Database.Dialogsystem.Models.DialogEntry>();
+        foreach (DialogNode node in rootNodes)
+        {
+            Assets.Scripts.Database.Dialogsystem.Models.DialogEntry entry = new Assets.Scripts.Database.Dialogsystem.Models.DialogEntry()
+            {
+                EntryId = Guid.NewGuid(),
+                DialogId = selectedDialog.DialogId,
+                Position = node.rect.position,
+                Titel = node.DialogTitel,
+                Typ = Assets.Scripts.Database.Dialogsystem.Models.EntryTyp.Entry
+            };
+            entries.Add(entry);
+            CreateSubEntries(entries, node, entry.EntryId);
+        }
+
+        return entries;
+
+    }
+
+    private void CreateSubEntries(List<Assets.Scripts.Database.Dialogsystem.Models.DialogEntry> list,
+        DialogNode parent, Guid entryId)
+    {
+        var nodes = GetSubNodes(parent);
+        foreach(DialogNode node in nodes)
+        {
+            Assets.Scripts.Database.Dialogsystem.Models.DialogEntry entry = new Assets.Scripts.Database.Dialogsystem.Models.DialogEntry()
+            {
+                EntryId = Guid.NewGuid(),
+                DialogId = selectedDialog.DialogId,
+                ParentId = entryId,
+                Position = node.rect.position,
+                Titel = node.DialogTitel,
+                Typ = Assets.Scripts.Database.Dialogsystem.Models.EntryTyp.Entry
+            };
+            list.Add(entry);
+            CreateSubEntries(list,node, entry.EntryId);
+        }
+    }
+
+    private List<DialogNode> GetSubNodes(DialogNode parentNode)
+    {
+        return connections.Where((s) => s.outPoint.node == parentNode)
+                .Select((s) => s.inPoint.node).ToList(); 
+    }
+
+    private class NodeData
+    {
+        public NodeData()
+        {
+            Nodes = new List<DialogNode>();
+            Connections = new List<DialogConnection>();
+        }
+        public List<DialogNode> Nodes { get; set; }
+        public List<DialogConnection> Connections { get; set; }
+    }
+    public NodeData GetNodesFromDatabase()
+    {
+        if (selectedDialog != null) return null;
+        NodeData data = new NodeData();
+        using (Assets.Scripts.Database.Dialogsystem.DialogDatabaseEntities context =
+            new Assets.Scripts.Database.Dialogsystem.DialogDatabaseEntities())
+        {
+            var entries = context.DialogEntriesSet.Find((s) => s.DialogId == selectedDialog.DialogId);
+            
+        }
+        return null;
+    }
+
+    #endregion
 
 }

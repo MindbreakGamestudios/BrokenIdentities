@@ -9,7 +9,6 @@ using UnityEngine;
 
 namespace Assets.Scripts.Database
 {
-    [Serializable]
     public class LiteDatabase : ScriptableObject
     {
         public byte[] Data;

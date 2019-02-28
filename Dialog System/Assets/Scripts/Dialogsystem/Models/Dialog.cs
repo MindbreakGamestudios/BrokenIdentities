@@ -8,6 +8,11 @@ namespace Assets.Scripts.Dialogsystem.Models
     [CreateAssetMenu(fileName = "NewDialog", menuName = "Dialog/New Dialog")]
     public class Dialog : ScriptableObject
     {
+        public Dialog()
+        {
+            DialogId = Guid.NewGuid();
+        }
+
         public Guid DialogId;
         public string Titel;   
         
