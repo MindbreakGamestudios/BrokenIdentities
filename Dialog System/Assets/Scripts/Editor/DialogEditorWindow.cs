@@ -401,7 +401,7 @@ public class DialogEditorWindow : EditorWindow
         public List<DialogNode> Nodes { get; set; }
         public List<DialogConnection> Connections { get; set; }
     }
-    public NodeData GetNodesFromDatabase()
+    private  NodeData GetNodesFromDatabase()
     {
         if (selectedDialog != null) return null;
         NodeData data = new NodeData();
