@@ -67,6 +67,9 @@
      <Compile Include="Assets\Scripts\Dialogsystem\Models\DialogTypes.cs" />
      <Compile Include="Assets\Scripts\Interaction\ClickInteractionComponent.cs" />
      <Compile Include="Assets\Scripts\Interaction\ClickInteractionSystem.cs" />
+     <Compile Include="Assets\Scripts\Inventory\Inventory.cs" />
+     <Compile Include="Assets\Scripts\Inventory\InventoryUI.cs" />
+     <Compile Include="Assets\Scripts\Inventory\ToggleInventoryVisible.cs" />
      <Compile Include="Assets\Scripts\Map\MapItem.cs" />
      <Compile Include="Assets\Scripts\Map\MapItemInteractionSystem.cs" />
      <Compile Include="Assets\Scripts\Map\MapItemsSystem.cs" />
@@ -116,6 +119,9 @@
  <Reference Include="Unity.CollabProxy.Editor">
  <HintPath>D:/Unity/BrokenIdentities/Dialog System/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
  </Reference>
+ <Reference Include="Unity.Postprocessing.Editor">
+ <HintPath>D:/Unity/BrokenIdentities/Dialog System/Library/ScriptAssemblies/Unity.Postprocessing.Editor.dll</HintPath>
+ </Reference>
  <Reference Include="Unity.Entities.Hybrid">
  <HintPath>D:/Unity/BrokenIdentities/Dialog System/Library/ScriptAssemblies/Unity.Entities.Hybrid.dll</HintPath>
  </Reference>
@@ -130,6 +136,9 @@
  </Reference>
  <Reference Include="Unity.2D.Common.Runtime">
  <HintPath>D:/Unity/BrokenIdentities/Dialog System/Library/ScriptAssemblies/Unity.2D.Common.Runtime.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Postprocessing.Runtime">
+ <HintPath>D:/Unity/BrokenIdentities/Dialog System/Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Entities">
  <HintPath>D:/Unity/BrokenIdentities/Dialog System/Library/ScriptAssemblies/Unity.Entities.dll</HintPath>
@@ -166,12 +175,6 @@
  </Reference>
  <Reference Include="Unity.Transforms.Hybrid">
  <HintPath>D:/Unity/BrokenIdentities/Dialog System/Library/ScriptAssemblies/Unity.Transforms.Hybrid.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Postprocessing.Editor">
- <HintPath>D:/Unity/BrokenIdentities/Dialog System/Library/ScriptAssemblies/Unity.Postprocessing.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Postprocessing.Runtime">
- <HintPath>D:/Unity/BrokenIdentities/Dialog System/Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
