@@ -7,15 +7,15 @@ using UnityEngine;
 
 namespace Assets.Scripts.Inventory
 {
+    public class Inventory : MonoBehaviour
+    {
+        public Item[] Items;
+    }
+
     [CreateAssetMenu(fileName = "Item", menuName = "Custom/Item", order = 1)]
     public class Item : ScriptableObject
     {
         public Sprite Icon;
         public string Name;
-    }
-
-    public class Inventory : MonoBehaviour
-    {
-        public Item[] Items;
     }
 }
