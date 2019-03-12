@@ -9,7 +9,18 @@ namespace Assets.Scripts.Player
 {
     public class PlayerData : MonoBehaviour
     {
+        private static PlayerData playerInformation;
+        public static PlayerData PlayerInformation => playerInformation;
+
+
         public float MoveSpeed = 2;
         public float SprintSpeed = 3;
+
+        public Inventory.Inventory Inventory;
+
+        void Start()
+        {
+            playerInformation = this;
+        }
     }
 }

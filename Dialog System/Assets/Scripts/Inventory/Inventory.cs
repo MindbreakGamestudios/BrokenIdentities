@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Assets.Scripts.Items;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,13 +10,22 @@ namespace Assets.Scripts.Inventory
 {
     public class Inventory : MonoBehaviour
     {
-        public Item[] Items;
-    }
+        public List<Item> Items = new List<Item>();
 
-    [CreateAssetMenu(fileName = "Item", menuName = "Custom/Item", order = 1)]
-    public class Item : ScriptableObject
-    {
-        public Sprite Icon;
-        public string Name;
+        public delegate void ItemAddedEventHandler(Item item);
+        public event ItemAddedEventHandler ItemAdded;
+        public void AddItem(Item item)
+        {
+            Items.Add(item);
+            ItemAdded?.Invoke(item);
+        }
+
+        public delegate void ItemRemovedEventHandler(Item item);
+        public event ItemRemovedEventHandler ItemRemoved;
+        public void RemoveItem(Item item)
+        {
+            Items.Remove(item);
+            ItemRemoved?.Invoke(item);
+        }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Assets.Scripts.Items;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -24,6 +25,8 @@ namespace Assets.Scripts.Inventory
                 return;
             }
 
+            DisplayedInventory.ItemAdded += CreateItemButton;
+
             foreach (var item in DisplayedInventory.Items)
             {
                 CreateItemButton(item);
@@ -33,25 +36,18 @@ namespace Assets.Scripts.Inventory
         public GameObject SlotPrefab;
         void CreateItemButton(Item item)
         {
-            var btn = Instantiate(SlotPrefab);
-            btn.GetComponent<Image>().sprite = item.Icon;
-            btn.transform.SetParent(ContentPanel);
+            var slot = Instantiate(SlotPrefab);
+            slot.transform.SetParent(ContentPanel);
 
-            var comp = btn.GetComponent<Button>();
-            comp.onClick.AddListener(() => selectedItem = item);
+            var behav = slot.GetComponent<InventorySlot>();
+            behav.Image.sprite = item.Icon;
+            behav.Button.onClick.AddListener(() => DisplayItem(item));
         }
 
-
-        private Item selectedItem;
-        private Item lastSelectedItem;
-        void Update()
+        private void DisplayItem(Item item)
         {
-            if (!Equals(selectedItem, lastSelectedItem))
-            {
-                ItemIcon.sprite = selectedItem?.Icon;
-                ItemName.text = selectedItem?.Name;
-            }
+            ItemIcon.sprite = item?.Icon;
+            ItemName.text = item?.Name;
         }
-
     }
 }

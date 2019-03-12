@@ -75,7 +75,7 @@ MonoBehaviour:
   m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -115,10 +115,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DisplayedInventory: {fileID: 0}
-  ContentPanel: {fileID: 0}
-  ItemIcon: {fileID: 0}
-  ItemName: {fileID: 0}
-  SlotPrefab: {fileID: 0}
+  ContentPanel: {fileID: 1581824583}
+  ItemIcon: {fileID: 882503446}
+  ItemName: {fileID: 1267924830}
+  SlotPrefab: {fileID: 4804324227884369337, guid: cba20d008dbbe3d4484e50a597295ef9,
+    type: 3}
 --- !u!1 &509843888
 GameObject:
   m_ObjectHideFlags: 0
@@ -155,8 +156,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 338.5, y: 1.300003}
-  m_SizeDelta: {x: -727.5, y: -20.1}
+  m_AnchoredPosition: {x: 299.36, y: 1.1400146}
+  m_SizeDelta: {x: -638.17, y: -19.37}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &509843891
 CanvasRenderer:
@@ -260,7 +261,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 2dfb133f434027f48a247ac0b7a96418, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -303,7 +304,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 85}
+  m_AnchoredPosition: {x: 0.9149897, y: 67.24893}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1267924831
@@ -382,8 +383,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1038, y: 461}
+  m_AnchoredPosition: {x: 0.0025253, y: -0.00096893}
+  m_SizeDelta: {x: 800.01, y: 407.39}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1319207549
 CanvasRenderer:
@@ -456,8 +457,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -156.5, y: 1.300003}
-  m_SizeDelta: {x: -358.5, y: -20.1}
+  m_AnchoredPosition: {x: -81.03998, y: 1.1400146}
+  m_SizeDelta: {x: -201.02, y: -19.37}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1581824587
 CanvasRenderer:
@@ -548,7 +549,7 @@ MonoBehaviour:
   m_ChildAlignment: 0
   m_StartCorner: 0
   m_StartAxis: 0
-  m_CellSize: {x: 100, y: 100}
-  m_Spacing: {x: 0, y: 0}
+  m_CellSize: {x: 120, y: 100}
+  m_Spacing: {x: -30, y: 0}
   m_Constraint: 0
   m_ConstraintCount: 2
