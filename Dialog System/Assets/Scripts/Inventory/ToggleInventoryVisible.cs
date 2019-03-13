@@ -1,16 +1,21 @@
-﻿using System.Collections;
+﻿using Assets.Scripts.Inventory;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class ToggleInventoryVisible : MonoBehaviour
 {
-    public  GameObject InventoryRoot;
+    public InventoryUI InventoryRoot;
+    public Inventory PlayerInventory;
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.I))
+        if (Input.GetButtonDown("ShowHideInventory"))
         {
-            InventoryRoot.SetActive(!InventoryRoot.activeSelf);
+            if (InventoryRoot.gameObject.activeSelf)
+                InventoryRoot.gameObject.SetActive(false);
+            else
+                InventoryRoot.ShowInventory(PlayerInventory);
         }
     }
 }

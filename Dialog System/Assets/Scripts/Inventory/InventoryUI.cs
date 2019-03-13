@@ -11,38 +11,64 @@ namespace Assets.Scripts.Inventory
 {
     public class InventoryUI : MonoBehaviour
     {
-        public Inventory DisplayedInventory;
         public Transform ContentPanel;
 
         public Image ItemIcon;
         public Text ItemName;
 
-        void Start()
+        private void Start()
         {
-            if (DisplayedInventory == null || ContentPanel == null || SlotPrefab == null)
-            {
-                Debug.LogError("Not all necessary references are set.");
-                return;
-            }
+            gameObject.SetActive(false);
+            CreateNecessarySlots(20);
+        }
 
-            DisplayedInventory.ItemAdded += CreateItemButton;
+        private List<GameObject> createdSlots = new List<GameObject>(50);
+        public void ShowInventory(Inventory inventory)
+        {
+            if (inventory == null) return;
 
-            foreach (var item in DisplayedInventory.Items)
+            gameObject.SetActive(true);
+
+            DeactivateUnusedSlot(inventory);
+            CreateNecessarySlots(inventory.Items.Count);
+
+            for (int i = 0; i < inventory.Items.Count; i++)
             {
-                CreateItemButton(item);
+                var slot = createdSlots[i];
+                slot.SetActive(true);
+
+                var item = inventory.Items[i];
+                var behav = slot.GetComponent<InventorySlot>();
+                behav.Image.sprite = item.Icon;
+                behav.Button.onClick.RemoveAllListeners();
+                behav.Button.onClick.AddListener(() => DisplayItem(item));
             }
         }
 
+        private void DeactivateUnusedSlot(Inventory inventory)
+        {
+            if (createdSlots.Count <= inventory.Items.Count) { return; }
+
+            for (int i = inventory.Items.Count; i < createdSlots.Count; i++)
+            {
+                createdSlots[i].SetActive(false);
+            }
+        }
+        
         public GameObject SlotPrefab;
-        void CreateItemButton(Item item)
+        private void CreateNecessarySlots(int itemsCount)
         {
-            var slot = Instantiate(SlotPrefab);
-            slot.transform.SetParent(ContentPanel);
+            if (itemsCount <= createdSlots.Count) { return; }
 
-            var behav = slot.GetComponent<InventorySlot>();
-            behav.Image.sprite = item.Icon;
-            behav.Button.onClick.AddListener(() => DisplayItem(item));
+            for (int i = createdSlots.Count; i < itemsCount; i++)
+            {
+                var slot = Instantiate<GameObject>(SlotPrefab);
+                slot.transform.SetParent(ContentPanel);
+
+                createdSlots.Add(slot);
+            }
         }
+        
 
         private void DisplayItem(Item item)
         {
