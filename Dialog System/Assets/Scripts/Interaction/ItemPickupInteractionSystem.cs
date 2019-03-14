@@ -30,7 +30,9 @@ namespace Assets.Scripts.Interaction
                 var item = data.ItemComponents[i];
 
                 if (click.LeftClick && item.Item != null)
+                {
                     inventory.AddItem(item.Item);
+                }
             }
         }
     }

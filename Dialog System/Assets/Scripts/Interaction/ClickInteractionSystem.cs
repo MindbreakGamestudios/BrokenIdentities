@@ -39,6 +39,9 @@ namespace Assets.Scripts.Interaction
 
                 clickInteraction.LeftClick = collides && leftClick;
                 clickInteraction.RightClick = collides && rightClick;
+
+                clickInteraction.WasHovered = clickInteraction.IsHovered;
+                clickInteraction.IsHovered = collides;
             }
 
         }
