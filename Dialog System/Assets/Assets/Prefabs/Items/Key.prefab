@@ -210,3 +210,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e41e9974fbcbb3948b5ce2a41983ed1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Enabled: 1
+  HoverParameterName: IsHovered

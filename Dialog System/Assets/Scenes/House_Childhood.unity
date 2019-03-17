@@ -1205,6 +1205,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Enabled: 0
+  HoverParameterName: 
 --- !u!114 &1929126273
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1303,6 +1304,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Enabled: 1
+  HoverParameterName: IsHovered
 --- !u!114 &2126601179
 MonoBehaviour:
   m_ObjectHideFlags: 0

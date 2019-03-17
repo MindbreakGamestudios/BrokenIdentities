@@ -28,8 +28,14 @@ namespace Assets.Scripts.HoveEffects
             {
                 var click = data.Clicks[i];
                 var animator = data.Animators[i];
+                var hover = data.HoverAnimations[i];
 
-                animator.SetBool("IsHovered", click.IsHovered && data.HoverAnimations[i].Enabled);
+                var enabled = click.IsHovered && hover.Enabled;
+
+                if (enabled != click.WasHovered)
+                {
+                    animator.SetBool(hover.HoverParameterName, click.IsHovered && hover.Enabled);
+                }
             }
         }
     }
