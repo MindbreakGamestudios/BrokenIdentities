@@ -10,6 +10,8 @@ namespace Assets.Scripts.Items
     [CreateAssetMenu(fileName = "Item", menuName = "Custom/Item", order = 1)]
     public class Item : ScriptableObject
     {
+        public int Id;
+
         public string Description;
         public Sprite Icon;
         public string Name;

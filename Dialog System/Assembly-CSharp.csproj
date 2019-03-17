@@ -80,6 +80,10 @@
     <Compile Include="Assets\Scripts\Interaction\ClickInteractionSystem.cs" />
     <Compile Include="Assets\Scripts\Interaction\DeactivateObjectAfterPickup.cs" />
     <Compile Include="Assets\Scripts\Interaction\DeactivateObjectAfterPickupSystem.cs" />
+    <Compile Include="Assets\Scripts\Interaction\Doors\DoorData.cs" />
+    <Compile Include="Assets\Scripts\Interaction\Doors\OpenDoorSystem.cs" />
+    <Compile Include="Assets\Scripts\Interaction\Doors\TeleportPlayerData.cs" />
+    <Compile Include="Assets\Scripts\Interaction\Doors\TeleportPlayerSystem.cs" />
     <Compile Include="Assets\Scripts\Interaction\ItemPickupInteractionData.cs" />
     <Compile Include="Assets\Scripts\Interaction\ItemPickupInteractionSystem.cs" />
     <Compile Include="Assets\Scripts\Inventory\Inventory.cs" />
@@ -195,6 +199,12 @@
     </Reference>
     <Reference Include="Unity.Transforms.Hybrid">
       <HintPath>I:/Unity/BrokenIdentities/Dialog System/Library/ScriptAssemblies/Unity.Transforms.Hybrid.dll</HintPath>
+    </Reference>
+    <Reference Include="Cinemachine">
+      <HintPath>I:/Unity/BrokenIdentities/Dialog System/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
+    </Reference>
+    <Reference Include="com.unity.cinemachine.editor">
+      <HintPath>I:/Unity/BrokenIdentities/Dialog System/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>I:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>

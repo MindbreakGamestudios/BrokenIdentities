@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f0a525ab59ec2244b29d77c368778a0, type: 3}
   m_Name: Key_House_Childhood
   m_EditorClassIdentifier: 
+  Id: 2
   Description: "Schl\xFCssel zum Haus des Jungen"
   Icon: {fileID: 21300000, guid: 2dfb133f434027f48a247ac0b7a96418, type: 3}
   Name: "Schl\xFCssel (Haus)"
