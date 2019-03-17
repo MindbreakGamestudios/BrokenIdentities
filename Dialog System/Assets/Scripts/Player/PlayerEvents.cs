@@ -10,11 +10,11 @@ namespace Assets.Scripts.Player
     public static class PlayerEvents
     {
         public delegate void TeleportPlayerToPositionHandler(Transform target);
-        public static event TeleportPlayerToPositionHandler MovePlayer;
+        public static event TeleportPlayerToPositionHandler TeleportPlayer;
         public static void OnTeleportPlayer(Transform target)
         {
             if (target != null)
-                MovePlayer?.Invoke(target);
+                TeleportPlayer?.Invoke(target);
         }
 
         public delegate void PlayerTeleportedHandler();

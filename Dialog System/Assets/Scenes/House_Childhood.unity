@@ -270,7 +270,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 133094021, guid: cccbeca69362e534db78f6cf8f1024c6, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 133094026, guid: cccbeca69362e534db78f6cf8f1024c6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1616,7 +1616,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!1 &1929126266
 GameObject:
   m_ObjectHideFlags: 0
@@ -2189,7 +2189,7 @@ PrefabInstance:
     - target: {fileID: 8344638882143025229, guid: 195077d83c5299748b8634919395d11e,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8344638882143025233, guid: 195077d83c5299748b8634919395d11e,
         type: 3}

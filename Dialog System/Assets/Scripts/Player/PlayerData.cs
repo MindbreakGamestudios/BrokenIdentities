@@ -21,7 +21,7 @@ namespace Assets.Scripts.Player
         void Start()
         {
             playerInformation = this;
-            PlayerEvents.MovePlayer += TeleportPlayer;
+            PlayerEvents.TeleportPlayer += TeleportPlayer;
         }
 
         void TeleportPlayer(Transform target)
