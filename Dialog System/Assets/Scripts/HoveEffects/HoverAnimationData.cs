@@ -9,5 +9,6 @@ namespace Assets.Scripts.HoveEffects
 {
     public class HoverAnimationData : MonoBehaviour
     {
+        public bool Enabled = true; 
     }
 }

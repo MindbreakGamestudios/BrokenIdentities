@@ -72,6 +72,8 @@
     <Compile Include="Assets\Scripts\Dialogsystem\Models\DialogEntry.cs" />
     <Compile Include="Assets\Scripts\Dialogsystem\Models\DialogTreeNode.cs" />
     <Compile Include="Assets\Scripts\Dialogsystem\Models\DialogTypes.cs" />
+    <Compile Include="Assets\Scripts\HoveEffects\DisableHoverAnimationAfterItemPickup.cs" />
+    <Compile Include="Assets\Scripts\HoveEffects\DisableHoverAnimationAfterItemPickupSystem.cs" />
     <Compile Include="Assets\Scripts\HoveEffects\HoverAnimationData.cs" />
     <Compile Include="Assets\Scripts\HoveEffects\HoverAnimationSystem.cs" />
     <Compile Include="Assets\Scripts\Interaction\ClickInteractionComponent.cs" />
