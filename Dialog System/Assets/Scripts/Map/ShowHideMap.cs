@@ -6,7 +6,12 @@ public class ShowHideMap : MonoBehaviour
 {
     void Start()
     {
-        
+        Assets.Scripts.Player.PlayerEvents.PlayerTeleported += OnPlayerTeleported;
+    }
+
+    void OnPlayerTeleported()
+    {
+        canvas.gameObject.SetActive(false);
     }
 
     [SerializeField]

@@ -32,9 +32,9 @@ namespace Assets.Scripts.HoveEffects
 
                 var enabled = click.IsHovered && hover.Enabled;
 
-                if (enabled != click.WasHovered)
+                if (enabled != click.WasHovered)    //Don't remove. Setting animation parameters is not cheap.
                 {
-                    animator.SetBool(hover.HoverParameterName, click.IsHovered && hover.Enabled);
+                    animator.SetBool(hover.HoverParameterName, enabled);
                 }
             }
         }

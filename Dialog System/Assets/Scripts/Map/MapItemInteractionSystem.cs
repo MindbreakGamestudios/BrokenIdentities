@@ -37,10 +37,13 @@ namespace Assets.Scripts.Map
                 }
             }
 
-            if (!string.IsNullOrWhiteSpace(selectedItem?.SceneName))
-            {
+            if (selectedItem == null)
+                return;
+
+            if (!string.IsNullOrWhiteSpace(selectedItem.SceneName))
                 SceneManager.LoadScene(selectedItem.SceneName);
-            }
+            else if (selectedItem.JumpPoint != null)
+                Player.PlayerEvents.OnTeleportPlayer(selectedItem.JumpPoint);
         }
     }
 }

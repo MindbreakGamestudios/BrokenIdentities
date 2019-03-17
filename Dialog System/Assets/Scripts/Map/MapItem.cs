@@ -11,6 +11,7 @@ namespace Assets.Scripts.Map
     {
         [HideInInspector]
         public bool isSelected;
+        public Transform JumpPoint;
 
 #pragma warning disable CS0649
         public string SceneName;

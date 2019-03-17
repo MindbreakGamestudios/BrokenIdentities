@@ -21,6 +21,15 @@ namespace Assets.Scripts.Player
         void Start()
         {
             playerInformation = this;
+            PlayerEvents.MovePlayer += TeleportPlayer;
+        }
+
+        void TeleportPlayer(Transform target)
+        {
+            gameObject.transform.position = target.position;
+            Camera.main.transform.position = new Vector3(target.position.x, target.position.y, Camera.main.transform.position.z);
+
+            PlayerEvents.OnPlayerTeleported();
         }
     }
 }

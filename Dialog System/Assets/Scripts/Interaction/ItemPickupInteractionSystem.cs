@@ -31,6 +31,8 @@ namespace Assets.Scripts.Interaction
 
                 if (click.LeftClick && item.Item != null && !item.HasBeenPickedUp)
                 {
+                    Items.ItemEvents.OnItemFound(item.Item);
+
                     inventory.AddItem(item.Item);
                     item.HasBeenPickedUp = true;
                 }

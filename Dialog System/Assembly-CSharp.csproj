@@ -87,11 +87,14 @@
     <Compile Include="Assets\Scripts\Inventory\InventoryUI.cs" />
     <Compile Include="Assets\Scripts\Inventory\ToggleInventoryVisible.cs" />
     <Compile Include="Assets\Scripts\Items\Item.cs" />
+    <Compile Include="Assets\Scripts\Items\ItemEvents.cs" />
+    <Compile Include="Assets\Scripts\Items\UI\ItemFoundUI.cs" />
     <Compile Include="Assets\Scripts\Map\MapItem.cs" />
     <Compile Include="Assets\Scripts\Map\MapItemInteractionSystem.cs" />
     <Compile Include="Assets\Scripts\Map\MapItemsSystem.cs" />
     <Compile Include="Assets\Scripts\Map\ShowHideMap.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerData.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerEvents.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerInputSystem.cs" />
     <None Include="Assets\Effects\GrayScaleShader.shader" />
     <Reference Include="Unity.2D.Animation.Runtime">
