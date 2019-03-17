@@ -13,11 +13,25 @@ namespace Assets.Scripts.Inventory
     {
         public Transform ContentPanel;
 
+        public Text ItemDescription;
         public Image ItemIcon;
         public Text ItemName;
 
         private void Start()
         {
+            if (ItemDescription == null)
+                Debug.LogError("ItemDescription property is not set.");
+
+            if (ItemIcon == null)
+                Debug.LogError("ItemIcon property is not set.");
+
+            if (ItemName == null)
+                Debug.LogError("ItemName property is not set.");
+
+            ItemDescription.text = String.Empty;
+            ItemIcon.sprite = null;
+            ItemName.text = string.Empty;
+
             gameObject.SetActive(false);
             CreateNecessarySlots(20);
         }
@@ -72,8 +86,23 @@ namespace Assets.Scripts.Inventory
 
         private void DisplayItem(Item item)
         {
-            ItemIcon.sprite = item?.Icon;
-            ItemName.text = item?.Name;
+            if (item == null)
+            {
+                ItemDescription.text = String.Empty;
+                ItemIcon.sprite = null;
+                ItemName.text = String.Empty;
+            }
+            else
+            {
+                ItemDescription.text = item.Description;
+                ItemIcon.sprite = item.Icon;
+                ItemName.text = item.Name;
+            }           
+
+            if (ItemIcon.sprite != null)
+                ItemIcon.color = Color.white;
+            else
+                ItemIcon.color = new Color(0, 0, 0, 0);
         }
     }
 }

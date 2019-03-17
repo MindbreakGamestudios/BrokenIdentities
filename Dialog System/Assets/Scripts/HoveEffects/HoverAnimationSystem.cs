@@ -29,7 +29,7 @@ namespace Assets.Scripts.HoveEffects
                 var click = data.Clicks[i];
                 var animator = data.Animators[i];
 
-                animator.SetBool("HoverOk", !click.WasHovered && click.IsHovered);
+                animator.SetBool("IsHovered", click.IsHovered);
             }
         }
     }

@@ -10,6 +10,9 @@ namespace Assets.Scripts.Interaction
 {
     public class ItemPickupInteractionData : MonoBehaviour
     {
+        [HideInInspector]
+        public bool HasBeenPickedUp;
+
         [Tooltip("The item to be sent to the inventory")]
         public Item Item;
     }

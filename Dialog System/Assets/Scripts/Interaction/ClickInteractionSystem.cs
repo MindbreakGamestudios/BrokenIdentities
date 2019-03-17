@@ -37,11 +37,9 @@ namespace Assets.Scripts.Interaction
 
                 bool collides = hit.collider != null && Equals(hit.collider, collider.Collider);
 
+                clickInteraction.IsHovered = collides;
                 clickInteraction.LeftClick = collides && leftClick;
                 clickInteraction.RightClick = collides && rightClick;
-
-                clickInteraction.WasHovered = clickInteraction.IsHovered;
-                clickInteraction.IsHovered = collides;
             }
 
         }

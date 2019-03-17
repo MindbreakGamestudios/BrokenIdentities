@@ -7,7 +7,6 @@ namespace Assets.Scripts.Interaction
         public bool RightClick;
         public bool LeftClick;
 
-        public bool WasHovered;
         public bool IsHovered;
     }
 }

@@ -29,9 +29,10 @@ namespace Assets.Scripts.Interaction
                 var click = data.ClickComponents[i];
                 var item = data.ItemComponents[i];
 
-                if (click.LeftClick && item.Item != null)
+                if (click.LeftClick && item.Item != null && !item.HasBeenPickedUp)
                 {
                     inventory.AddItem(item.Item);
+                    item.HasBeenPickedUp = true;
                 }
             }
         }
