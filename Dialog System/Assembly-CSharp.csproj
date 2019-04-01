@@ -101,6 +101,9 @@
     <Compile Include="Assets\Scripts\Player\PlayerEvents.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerInputSystem.cs" />
     <None Include="Assets\Effects\GrayScaleShader.shader" />
+    <Reference Include="Cinemachine">
+      <HintPath>I:/Unity/BrokenIdentities/Dialog System/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.2D.Animation.Runtime">
       <HintPath>I:/Unity/BrokenIdentities/Dialog System/Library/ScriptAssemblies/Unity.2D.Animation.Runtime.dll</HintPath>
     </Reference>
@@ -179,6 +182,9 @@
     <Reference Include="Unity.2D.Triangle.Runtime">
       <HintPath>I:/Unity/BrokenIdentities/Dialog System/Library/ScriptAssemblies/Unity.2D.Triangle.Runtime.dll</HintPath>
     </Reference>
+    <Reference Include="com.unity.cinemachine.editor">
+      <HintPath>I:/Unity/BrokenIdentities/Dialog System/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Burst.Editor">
       <HintPath>I:/Unity/BrokenIdentities/Dialog System/Library/ScriptAssemblies/Unity.Burst.Editor.dll</HintPath>
     </Reference>
@@ -199,12 +205,6 @@
     </Reference>
     <Reference Include="Unity.Transforms.Hybrid">
       <HintPath>I:/Unity/BrokenIdentities/Dialog System/Library/ScriptAssemblies/Unity.Transforms.Hybrid.dll</HintPath>
-    </Reference>
-    <Reference Include="Cinemachine">
-      <HintPath>I:/Unity/BrokenIdentities/Dialog System/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
-    </Reference>
-    <Reference Include="com.unity.cinemachine.editor">
-      <HintPath>I:/Unity/BrokenIdentities/Dialog System/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>I:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
