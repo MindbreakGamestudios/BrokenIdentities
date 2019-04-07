@@ -60,8 +60,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\EffectExamples\Shared\Scripts\DecalDestroyer.cs" />
+    <Compile Include="Assets\EffectExamples\Shared\Scripts\ExtinguishableFire.cs" />
+    <Compile Include="Assets\EffectExamples\Shared\Scripts\GunAim.cs" />
+    <Compile Include="Assets\EffectExamples\Shared\Scripts\GunShoot.cs" />
+    <Compile Include="Assets\EffectExamples\Shared\Scripts\ParticleCollision.cs" />
+    <Compile Include="Assets\EffectExamples\Shared\Scripts\ParticleExamples.cs" />
+    <Compile Include="Assets\EffectExamples\Shared\Scripts\ParticleMenu.cs" />
+    <Compile Include="Assets\EffectExamples\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\Effects\Grayscale.cs" />
     <Compile Include="Assets\Scripts\Base\ColliderComponent.cs" />
+    <Compile Include="Assets\Scripts\Cameras\CameraMovementData.cs" />
+    <Compile Include="Assets\Scripts\Cameras\CameraMovementSystem.cs" />
     <Compile Include="Assets\Scripts\Database\Dialogsystem\DialogDatabaseEntities.cs" />
     <Compile Include="Assets\Scripts\Database\Dialogsystem\Models\DialogEntry.cs" />
     <Compile Include="Assets\Scripts\Database\LiteDatabase.cs" />
@@ -97,9 +107,14 @@
     <Compile Include="Assets\Scripts\Map\MapItemInteractionSystem.cs" />
     <Compile Include="Assets\Scripts\Map\MapItemsSystem.cs" />
     <Compile Include="Assets\Scripts\Map\ShowHideMap.cs" />
+    <Compile Include="Assets\Scripts\Player\DrawPlayerGizmos.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerData.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerEvents.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerInputSystem.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerMouseRotationData.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerMouseRotationSystem.cs" />
+    <Compile Include="Assets\Scripts\Scenes\SceneManager.cs" />
+    <None Include="Assets\EffectExamples\Shared\Shaders\SurfaceShader_VC.shader" />
     <None Include="Assets\Effects\GrayScaleShader.shader" />
     <Reference Include="Cinemachine">
       <HintPath>I:/Unity/BrokenIdentities/Dialog System/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
