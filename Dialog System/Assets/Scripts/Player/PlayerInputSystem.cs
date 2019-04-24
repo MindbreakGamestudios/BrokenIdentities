@@ -26,9 +26,8 @@ namespace Assets.Scripts.Player
 
             var horizontal = Input.GetAxis("Horizontal");
             var vertical = Input.GetAxis("Vertical");
-            var dir = new Vector3(horizontal, 0f, vertical);
-            
-            var isSprinting = Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift);
+
+            var isSprinting = Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.RightShift);
             for (int i = 0; i < data.Length; i++)
             {
                 var body = data.Bodies[i];

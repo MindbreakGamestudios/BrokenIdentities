@@ -28,14 +28,15 @@ namespace Assets.Scripts.Interaction
             var leftClick = Input.GetMouseButtonDown(0);
             var rightClick = Input.GetMouseButtonDown(1);
 
-            var hit = Physics2D.Raycast(mousePos, new Vector2(0, 0));
-
+            var ray = new Ray(Camera.main.transform.position, Camera.main.transform.forward.normalized);
+            var hit = Physics.Raycast(ray, out var hitInfo, 5, ~(1 << 9));  //Don't interact with player
+            
             for (int i = 0; i < entity.Length; i++)
             {
                 ColliderComponent collider = entity.colliders[i];
                 ClickInteractionComponent clickInteraction = entity.clickInteractions[i];
 
-                bool collides = hit.collider != null && Equals(hit.collider, collider.Collider);
+                bool collides = hit && hitInfo.collider != null && Equals(hitInfo.collider, collider.Collider);
 
                 clickInteraction.WasHovered = clickInteraction.IsHovered;
                 clickInteraction.IsHovered = collides;

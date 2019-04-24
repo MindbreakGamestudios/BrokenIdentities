@@ -9,6 +9,6 @@ namespace Assets.Scripts
 {
     class ColliderComponent : MonoBehaviour
     {
-        public Collider2D Collider;
+        public Collider Collider;
     }
 }

@@ -11,8 +11,7 @@ namespace Assets.Scripts.Scenes
     {
         void Start()
         {
-            Cursor.visible = false;
-            Cursor.lockState = CursorLockMode.Locked;
+            CursorLocker.LockCursor();
         }
 
         private void LateUpdate()

@@ -15,6 +15,7 @@ namespace Assets.Scripts.Player
 
         public float MoveSpeed = 2;
         public float SprintSpeed = 3;
+        public Transform InteractionRaycastOrigin;
 
         public Inventory.Inventory Inventory;
 

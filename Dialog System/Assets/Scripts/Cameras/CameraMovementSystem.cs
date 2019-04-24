@@ -41,8 +41,6 @@ namespace Assets.Scripts.Cameras
 
                 var desiredRotQ = Quaternion.Euler(movement.DesiredRotation, camera.transform.eulerAngles.y, camera.transform.eulerAngles.z);
                 camera.transform.rotation = Quaternion.Lerp(camera.transform.rotation, desiredRotQ, Time.deltaTime * 5);
-
-                Debug.Log($"{deltaY}, {movement.DesiredRotation}, {desiredRotQ.eulerAngles.x}, {camera.transform.rotation.eulerAngles.x}");
             }
         }
     }

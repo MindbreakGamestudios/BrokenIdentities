@@ -113,6 +113,7 @@
     <Compile Include="Assets\Scripts\Player\PlayerInputSystem.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerMouseRotationData.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerMouseRotationSystem.cs" />
+    <Compile Include="Assets\Scripts\Scenes\CursorLocker.cs" />
     <Compile Include="Assets\Scripts\Scenes\SceneManager.cs" />
     <None Include="Assets\EffectExamples\Shared\Shaders\SurfaceShader_VC.shader" />
     <None Include="Assets\Effects\GrayScaleShader.shader" />

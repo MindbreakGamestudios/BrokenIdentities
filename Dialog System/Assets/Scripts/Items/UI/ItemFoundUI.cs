@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Assets.Scripts.Scenes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -32,7 +33,7 @@ namespace Assets.Scripts.Items.UI
                 Debug.LogError("txtItemName is null");
 
             ItemEvents.ItemFound += ShowItemFound;
-            cmdGotIt.onClick.AddListener(() => gameObject.SetActive(false));
+            cmdGotIt.onClick.AddListener(new UnityEngine.Events.UnityAction(Close));
 
             gameObject.SetActive(false);    //Set as Invisible after start.
         }
@@ -45,13 +46,27 @@ namespace Assets.Scripts.Items.UI
             txtItemDescription.text = item.Description;
             txtItemName.text = item.Name;
 
+            Show();
+        }
+
+        private void Show()
+        {
             gameObject.SetActive(true);
+            CursorLocker.UnlockCursor();
         }
 
         private void Update()
         {
             if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.KeypadEnter) || Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Space))
-                gameObject.SetActive(false);
+            {
+                Close();
+            }
+        }
+
+        private void Close()
+        {
+            gameObject.SetActive(false);
+            CursorLocker.LockCursor();
         }
     }
 }

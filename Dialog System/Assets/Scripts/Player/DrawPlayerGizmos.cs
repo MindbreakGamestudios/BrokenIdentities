@@ -12,9 +12,7 @@ namespace Assets.Scripts.Player
         private void OnDrawGizmos()
         {
             var body = GetComponent<Rigidbody>();
-            Gizmos.DrawLine(transform.position, transform.forward * 200);
-            Gizmos.DrawLine(transform.position, body.velocity * 200);
-
+            Gizmos.DrawLine(PlayerData.PlayerInformation.InteractionRaycastOrigin.position, Camera.main.transform.forward.normalized * 5);
         }
     }
 }
