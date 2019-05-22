@@ -29,7 +29,7 @@ namespace Assets.Scripts.Interaction
             var rightClick = Input.GetMouseButtonDown(1);
 
             var ray = new Ray(Camera.main.transform.position, Camera.main.transform.forward.normalized);
-            var hit = Physics.Raycast(ray, out var hitInfo, 5, ~(1 << 9));  //Don't interact with player
+            var hit = Physics.Raycast(ray, out var hitInfo, 10, ~(1 << 9));  //Don't interact with player
             
             for (int i = 0; i < entity.Length; i++)
             {
